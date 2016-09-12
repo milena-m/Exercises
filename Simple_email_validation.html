@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: #0A1B2A;
+                font-family: Verdana;
+                font-size: 15px;
+                color: white;
+            }
+            #div1 {
+                width: 160px;
+            }
+            button {
+               font-family: Verdana;
+               font-size: 13px; 
+            }
+        </style>
+        <script>
+            function validate() {
+                var div = document.getElementById('div1');
+                var email = document.getElementById('txt_input').value;
+                var pattern = /[a-z0-9]+@[a-z0-9]+.[a-z]+/i;
+                var result = pattern.test(email);
+                if (result === true) {
+                    div.innerText = email;
+                    div.style.backgroundColor = '#99ff99';
+                } else {
+                    div.innerText = email;
+                    div.style.backgroundColor = '#ff4d4d';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>JS simple e-mail validation exercise</h3>
+        Input e-mail:
+        <br>
+        <input type="text" id="txt_input"><br>
+        <div id="div1"></div>
+        <button id="validate" onclick="validate()">Validate</button>
+    </body>
+</html>

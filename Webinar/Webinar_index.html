@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Webinar registration form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="webinar_stylesheet.css">
+        <script type="text/javascript" src="webinar.js" ></script>
+    </head>
+    <body>
+        <h2>Регистрация за уебинар</h2>
+        <div id="form_box">
+            <form name="webinar_form" id="webinar_form" method="post">
+                Име и фамилия:
+                <br>
+                <input type="text" id="names">
+                <br>
+                Адрес:
+                <br>
+                <input type="text" id="address">
+                <br>
+                Населено място:
+                <br>
+                <input type="text" id="town">
+                <br>
+                Пощенски код:
+                <br>
+                <input type="text" id="postal_code">
+                <br>
+                Имейл:
+                <br>
+                <input type="text" id="email">
+                <br>
+                Телефон:
+                <br>
+                <input type="text" id="phone_num">
+                <br>
+                Дата на семинара:
+                <br>
+                <input type="date" id="date">
+                <br><br>
+                <input type="checkbox" onclick="show_hide('invoice_data')">Желая фактура
+                <br>
+                <div id="invoice_data" style="display:none">
+                    <br>
+                    Фирма/Организация:
+                    <br>
+                    <input type="text" id="company">
+                    <br>
+                    МОЛ:
+                    <br>
+                    <input type="text" id="company_mol">
+                    <br>
+                    ЕИК:
+                    <br>
+                    <input type="text" id="company_id">
+                    <br>
+                    ИН по ДДС:
+                    <br>
+                    <input type="text" id="company_vat">
+                    <br>
+                    Адрес:
+                    <br>
+                    <input type="text" id="company_address">
+                </div> 
+                <br>
+                <input type="submit" value="Регистрирай ме" id="submit">
+                <button onclick="clearInput()">Изчисти</button>
+            </form>
+        </div>
+    </body>
+</html>
+

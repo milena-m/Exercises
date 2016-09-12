@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paragraph generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        Input paragraph text here:
+        <br>
+        <input type="text" id="text_input">
+        <button onclick="createParagraph('wrapper', 'text_input')">Create paragraph</button>   
+        <div id="wrapper"></div>
+        <script>
+            function createParagraph(id, text) {
+                var p_text = document.getElementById(text).value;
+                var p = document.createElement('P');
+                var content = document.createTextNode(p_text);
+                p.appendChild(content);
+                document.getElementById(id).appendChild(p);
+                clearInput(text);
+            }
+            
+            function clearInput(id) {
+                document.getElementById(id).value="";
+            }
+        </script>
+    </body>
+</html>

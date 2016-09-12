@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Generator object</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="wrapper"></div>
+        <div id="book"></div> 
+        <script>
+            var HTMLGenerator = {
+                createParagraph: function (id, text) {
+                    var p = document.createElement('p');
+                    var p_content = document.createTextNode(text);
+                    p.appendChild(p_content);
+                    document.getElementById(id).appendChild(p);
+                },
+                createDiv: function (id, div_class) {
+                    var div1 = document.createElement('div');
+                    div1.className = div_class;
+                    document.getElementById(id).appendChild(div1);
+                },
+                createLink: function (id, text, url) {
+                    var link = document.createElement('a');
+                    link.innerHTML = text;
+                    link.setAttribute('href', url);
+                    document.getElementById(id).appendChild(link);
+                }
+            };
+            
+            HTMLGenerator.createParagraph('wrapper', 'New paragraph');
+            HTMLGenerator.createDiv('wrapper', 'section');
+            HTMLGenerator.createLink('book', 'C# basics book', 'http://www.introprogramming.info/');
+        </script>
+    </body>
+</html>

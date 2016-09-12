@@ -1,0 +1,16 @@
+body {
+    background-color: #0489B1;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #A9F5E1;
+}
+#form_box {
+    background-color: #0B0B3B;
+    width: 200px;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+#invoice-info {
+    display: none;
+}
